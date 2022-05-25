@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '../../Shear/Button/Button';
 
 const Tool = ({ product }) => {
-    console.log(product);
     const { name, img, price, description, orderQuantity, quantity } = product;
     return (
         <div class="card card-compact w-96 bg-base-200 shadow-xl gap-4 mb-4">

@@ -1,0 +1,65 @@
+[
+    {
+        "_id": 1,
+        "name": " Artists- KeepSmiling 12pcs Mix Brush",
+        "img": "https://i.ibb.co/bbjnTrR/art-69727-640.jpg",
+        "price": 100,
+        "description": "Stationery is a mass noun referring to commercially manufactured writing materials, including cut paper, envelopes, writing implements, continuous form paper, and other office supplies.Stationery includes materials to be written on by hand (e.g., letter paper) or by equipment such as computer printers.",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 2,
+        "name": "Paint Brush",
+        "img": "https://i.ibb.co/XZ6pcQY/graphics-98384-640.png",
+        "price": 150,
+        "description": "Brush hairs do not fall out after cleaning The ferrules are double crimped and secure to the handle so there is no wiggling Short wooden handles give you more control of the brush while painting Brushes hold their shape and keep their spring after cleaning",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 3,
+        "name": "1.5inch Paint Brush",
+        "img": "https://i.ibb.co/74GWsWw/paint-brush-4535603-640.jpg",
+        "price": 140,
+        "description": "Product is best suitable for water as well as oil based paint application, due to its imported paint brush filament",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 4,
+        "name": " Mix Paint Brush",
+        "img": "https://i.ibb.co/H7tVFsH/painter-4550176-640.jpg",
+        "price": 200,
+        "description": "Professional Results On Walls, Trim, Cabinets, Doors, Fences, Decks, Touch Ups, Arts And Crafts",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 5,
+        "name": "Cotton Paint Roller Brush with Rubber grip Handle",
+        "img": "https://i.ibb.co/cXC9Ty5/paint-4972941-1280.jpg",
+        "price": 220,
+        "description": " AcrylicFeatures: Portable, Durable, Easy to UseLength: 23cm (Approx.)Smooth painting, good adsorption, greatly improving efficiency.Suitable for painting, family decoration and club decoration on various occasions",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 6,
+        "name": "Small Paint Roller",
+        "img": "https://i.ibb.co/8m7QBFJ/renovate-3293498-640.jpg",
+        "price": 250,
+        "description": "The roller frame made from a metal construction with a plastic handle made to a standard & it's the same with the mini plastic paint tray this made from durable hard plastic that won't crack or flex easily.",
+        "orderQuantity": 500,
+        "quantity": 1000
+    },
+    {
+        "_id": 7,
+        "name": "Painting Palette Spoon ",
+        "img": "https://i.ibb.co/c8gB8KQ/c84b06979eb61a236733195aa401987d.jpg",
+        "price": 100,
+        "description": "KNIFE SHAPES - The set contains 5 different knife shapes with appropriate thickness, weight & flexibility. They can be used to create stunning painting effects consisting of color, light, shades & layers.",
+        "orderQuantity": 500,
+        "quantity": 1000
+    }
+]

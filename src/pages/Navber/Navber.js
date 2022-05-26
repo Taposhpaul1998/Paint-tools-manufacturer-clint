@@ -14,7 +14,9 @@ const Navber = () => {
     <li><Link to='/blogs'>BLOGS</Link></li>
     <li><Link to='/orders'>ORDERS</Link></li>
     <li><Link to='/reviews'>REVIEWS</Link></li>
-    <li><Link to='/contact'>CONTACT US</Link></li>
+    <li>
+      {user && <Link to='/deshbord'>DESHBOARD</Link>}
+    </li>
     <li>
       {
         user ?

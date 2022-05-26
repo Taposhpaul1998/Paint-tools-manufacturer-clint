@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Erorr from './pages/Erorr/Erorr';
 import Login from './pages/Login/Login/Login';
 import Signup from './pages/Login/Signup/Signup';
+import Deshbord from './pages/Deshbord/Deshbord/Deshbord';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navber></Navber>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/deshbord" element={<Deshbord></Deshbord>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/*" element={<Erorr></Erorr>}></Route>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../Shear/Button/Button';
 
 const Banner = () => {
     return (
@@ -8,7 +7,7 @@ const Banner = () => {
                 <div class="max-w-md">
                     <h1 class="text-5xl font-bold text-white">Hero Paint Tools</h1>
                     <p class="py-6 font-semibold text-lg text-white">World's Largest Paint Manufacturing Equipment Marketplace. Choose Your Favorite Product and Order Now! Global Brands Coverage. 100% On-time Shipment Protection.</p>
-                    <Button>Order now</Button>
+                    <button class="btn btn-accent bg-teal-900 text-white font-bold">Order now</button>
                 </div>
             </div>
         </div>

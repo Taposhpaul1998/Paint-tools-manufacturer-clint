@@ -7,6 +7,8 @@ import Login from './pages/Login/Login/Login';
 import Signup from './pages/Login/Signup/Signup';
 import Deshbord from './pages/Deshbord/Deshbord/Deshbord';
 import RequireAuth from './pages/Login/RequriAuth/RequriAuth';
+import Blog from './pages/Blog/Blog';
+import Purchase from './pages/Order/Purchase';
 
 
 function App() {
@@ -18,6 +20,10 @@ function App() {
         <Route path="/deshbord" element={
           <RequireAuth><Deshbord></Deshbord></RequireAuth>
         }></Route>
+        <Route path="/product/:productid" element={
+          <RequireAuth><Purchase></Purchase></RequireAuth>
+        }></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/*" element={<Erorr></Erorr>}></Route>

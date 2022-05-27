@@ -11,6 +11,7 @@ import Blog from './pages/Blog/Blog';
 import Purchase from './pages/Order/Purchase';
 import Myorders from './pages/Deshbord/Myorders/Myorders';
 import Allorders from './pages/Deshbord/Allorders/Allorders';
+import Addproduct from './pages/Deshbord/Addproducts/Addproduct';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         }>
           <Route path="myorders" element={<Myorders></Myorders>}></Route>
           <Route path="allorders" element={<Allorders></Allorders>}></Route>
+          <Route path="addProduct" element={<Addproduct></Addproduct>}></Route>
 
         </Route>
 

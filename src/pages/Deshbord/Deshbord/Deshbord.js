@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
+
 const Deshbord = () => {
     return (
-        <div class="drawer drawer-mobile">
+        <div class="drawer drawer-mobile bg-teal-600">
             <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content">
                 <Outlet></Outlet>
@@ -21,6 +22,7 @@ const Deshbord = () => {
                 </ul>
 
             </div>
+
         </div>
     );
 };

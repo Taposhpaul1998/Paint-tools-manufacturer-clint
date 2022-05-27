@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../../Shear/Footer/Footer';
 import Banner from '../Banner/Banner';
 import Catagorys from '../Catagory/Catagorys';
+import Reviews from '../Review/Reviews';
 import Summary from '../Summary/Summary';
 import Tools from '../Tools/Tools';
 
@@ -12,6 +13,7 @@ const Home = () => {
             <Tools></Tools>
             <Summary></Summary>
             <Catagorys></Catagorys>
+            <Reviews></Reviews>
             <Footer></Footer>
         </div>
     );

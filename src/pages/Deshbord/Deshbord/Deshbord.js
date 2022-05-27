@@ -18,7 +18,7 @@ const Deshbord = () => {
                     <li><Link to="/deshbord/allorders">Manage All Orders</Link></li>
                     <li><Link to="/deshbord/addProduct">Add A Product</Link></li>
                     <li><Link to="/deshbord/admin">Make Admin</Link></li>
-                    <li><Link to="/deshbord/manafeProducts">Manage Products</Link></li>
+                    <li><Link to="/deshbord/manageProducts">Manage Products</Link></li>
                 </ul>
 
             </div>

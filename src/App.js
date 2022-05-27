@@ -12,6 +12,7 @@ import Purchase from './pages/Order/Purchase';
 import Myorders from './pages/Deshbord/Myorders/Myorders';
 import Allorders from './pages/Deshbord/Allorders/Allorders';
 import Addproduct from './pages/Deshbord/Addproducts/Addproduct';
+import ManageProducts from './pages/Deshbord/ManageProducts/ManageProducts';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="myorders" element={<Myorders></Myorders>}></Route>
           <Route path="allorders" element={<Allorders></Allorders>}></Route>
           <Route path="addProduct" element={<Addproduct></Addproduct>}></Route>
+          <Route path="manageProducts" element={<ManageProducts></ManageProducts>}></Route>
 
         </Route>
 

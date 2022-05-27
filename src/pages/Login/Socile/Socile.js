@@ -2,9 +2,11 @@ import React from 'react';
 import auth from '../../../firebaseinit';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../../Shear/Loading/Loading';
+import useToken from '../../Hooks/useToken';
 
 const Socile = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [token] = useToken(user);
     let errorElement;
     if (loading) {
         return <Loading></Loading>

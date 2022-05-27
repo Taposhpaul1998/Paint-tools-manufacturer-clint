@@ -1,6 +1,7 @@
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../../firebaseinit';
+import useToken from '../../Hooks/useToken';
 import Footer from '../../Shear/Footer/Footer';
 import Socile from '../Socile/Socile';
 
@@ -11,6 +12,7 @@ const Signup = () => {
         user,
     ] = useCreateUserWithEmailAndPassword(auth)
     const [updateProfile] = useUpdateProfile(auth);
+    const [token] = useToken(user);
 
 
     const onSubmit = async (data) => {

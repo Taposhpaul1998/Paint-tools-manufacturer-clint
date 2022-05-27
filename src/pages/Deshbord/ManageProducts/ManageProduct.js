@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ManageProduct = ({ product }) => {
-    const { name, img, price, orderQuantity, quantity } = product;
+const ManageProduct = ({ product, hendelDelete }) => {
+    const { name, img, price, orderQuantity, quantity, _id } = product;
 
     return (
         <tr>
@@ -10,7 +10,7 @@ const ManageProduct = ({ product }) => {
             <td>{price}</td>
             <td>{orderQuantity}</td>
             <td>{quantity}</td>
-            <td><button class="btn btn-xs bg-red-600">Delete</button></td>
+            <td><button onClick={() => hendelDelete(_id)} class="btn btn-xs bg-red-600">Delete</button></td>
         </tr>
     );
 };

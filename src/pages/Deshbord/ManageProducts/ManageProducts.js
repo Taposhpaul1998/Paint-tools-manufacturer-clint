@@ -1,9 +1,25 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import useProducts from '../../Hooks/useProducts';
 import ManageProduct from './ManageProduct';
 
 const ManageProducts = () => {
-    const [products] = useProducts();
+    const [products, setProducts] = useProducts();
+    const hendelDelete = (id) => {
+        const proceed = window.confirm('Are you sure ?')
+        if (proceed) {
+            const url = `http://localhost:5000/products/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = products.filter(product => product._id !== id);
+                    setProducts(remaining);
+                    toast.success('success to delete')
+                })
+        }
+    }
     return (
         <div>
             <h2 className="text-2xl text-center my-4">All Products :{products.length}</h2>
@@ -24,6 +40,7 @@ const ManageProducts = () => {
                             products.map(product => <ManageProduct
                                 key={product._id}
                                 product={product}
+                                hendelDelete={hendelDelete}
                             ></ManageProduct>)
                         }
                     </tbody>

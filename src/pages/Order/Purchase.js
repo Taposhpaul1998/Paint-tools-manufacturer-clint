@@ -76,7 +76,7 @@ const Purchase = () => {
                             <label class="label">
                                 <span class="label-text">Pruduct Image</span>
                             </label>
-                            <input type="img" value={product.img} class="input input-bordered w-full max-w-xs" readOnly {...register("orderQuantity")} />
+                            <input type="img" value={product.img} class="input input-bordered w-full max-w-xs" readOnly {...register("img")} />
 
                             <input type="submit" value={"Purchase"} class="btn btn-accent w-full max-w-xs text-lg font-normal mt-3" />
                         </form>

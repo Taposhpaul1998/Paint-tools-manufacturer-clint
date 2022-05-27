@@ -9,6 +9,8 @@ import Deshbord from './pages/Deshbord/Deshbord/Deshbord';
 import RequireAuth from './pages/Login/RequriAuth/RequriAuth';
 import Blog from './pages/Blog/Blog';
 import Purchase from './pages/Order/Purchase';
+import Myorders from './pages/Deshbord/Myorders/Myorders';
+import Allorders from './pages/Deshbord/Allorders/Allorders';
 
 
 function App() {
@@ -17,9 +19,16 @@ function App() {
       <Navber></Navber>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/deshbord" element={
+
+        <Route path="deshbord" element={
           <RequireAuth><Deshbord></Deshbord></RequireAuth>
-        }></Route>
+        }>
+          <Route path="myorders" element={<Myorders></Myorders>}></Route>
+          <Route path="allorders" element={<Allorders></Allorders>}></Route>
+
+        </Route>
+
+
         <Route path="/product/:productid" element={
           <RequireAuth><Purchase></Purchase></RequireAuth>
         }></Route>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Myorder from './Myorder';
+import Allorder from './Allorder';
 
-const Myorders = () => {
+const Allorders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
@@ -11,24 +11,25 @@ const Myorders = () => {
     }, [])
     return (
         <div>
-            <h2 className="text-2xl text-center my-4">My Orders :{orders.length}</h2>
+            <h2 className="text-2xl text-center my-4">All Orders :{orders.length}</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
                         <tr>
                             <th>Image</th>
-                            <th>Name</th>
+                            <th>Product Name</th>
                             <th>Quantity</th>
-                            <th>Payment</th>
+                            <th>User Name</th>
+                            <th>User Email</th>
                             <th>Remove Order</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            orders.map(order => <Myorder
+                            orders.map(order => <Allorder
                                 key={order._id}
                                 order={order}
-                            ></Myorder>)
+                            ></Allorder>)
                         }
                     </tbody>
                 </table>
@@ -37,4 +38,4 @@ const Myorders = () => {
     );
 };
 
-export default Myorders;
+export default Allorders;

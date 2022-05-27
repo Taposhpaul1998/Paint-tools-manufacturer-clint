@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebaseinit';
 import Footer from '../Shear/Footer/Footer';
 
 const Purchase = () => {
+    const [user] = useAuthState(auth);
     const { productid } = useParams();
     const { register, handleSubmit } = useForm();
     const [product, setProduct] = useState({});
@@ -14,10 +17,24 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
-    console.log(product)
-    const onSubmit = (data) => {
 
-    }
+
+    const onSubmit = data => {
+        const url = "http://localhost:5000/orders";
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+
+    };
+
 
     return (
         <div className='bg-teal-600'>
@@ -40,19 +57,27 @@ const Purchase = () => {
                             <label class="label">
                                 <span class="label-text">Name</span>
                             </label>
-                            <input type="name" placeholder=" name" class="input input-bordered w-full max-w-xs" required {...register("name")} />
+                            <input type="name" value={user.displayName} class="input input-bordered w-full max-w-xs" readOnly {...register("name")} />
                             <label class="label">
                                 <span class="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder=" Email" class="input input-bordered w-full max-w-xs" required {...register("email")} />
+                            <input type="email" value={user.email} class="input input-bordered w-full max-w-xs" readOnly {...register("email")} />
                             <label class="label">
-                                <span class="label-text">Email</span>
+                                <span class="label-text">Pruduct Name</span>
                             </label>
-                            <input type="email" placeholder=" Email" class="input input-bordered w-full max-w-xs" required {...register("email")} />
+                            <input type="name" value={product.name} class="input input-bordered w-full max-w-xs" readOnly {...register("pruductName")} />
+
                             <label class="label">
-                                <span class="label-text">Email</span>
+                                <span class="label-text">Quantity</span>
                             </label>
-                            <input type="email" placeholder=" Email" class="input input-bordered w-full max-w-xs" required {...register("email")} />
+                            {Error}
+                            <input type="number" placeholder={product.orderQuantity} class="input input-bordered w-full max-w-xs" required {...register("quantity")} />
+
+                            <label class="label">
+                                <span class="label-text">Pruduct Image</span>
+                            </label>
+                            <input type="img" value={product.img} class="input input-bordered w-full max-w-xs" readOnly {...register("orderQuantity")} />
+
                             <input type="submit" value={"Purchase"} class="btn btn-accent w-full max-w-xs text-lg font-normal mt-3" />
                         </form>
                     </div>

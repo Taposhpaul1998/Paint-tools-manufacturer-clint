@@ -14,6 +14,7 @@ const Deshbord = () => {
         <div class="drawer drawer-mobile bg-teal-600">
             <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content">
+                <h2 className='text-2xl font-bold text-center mt-4 text-white'>Welcome to Hero Paint Tools Dashboard</h2>
                 <Outlet></Outlet>
             </div>
             <div class="drawer-side ">

@@ -1,9 +1,10 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import auth from '../../../firebaseinit';
 import useAdmin from '../../Hooks/useAdmin';
-import Myprofile from '../MyProfile/Myprofile';
+
 
 
 const Deshbord = () => {
@@ -30,7 +31,7 @@ const Deshbord = () => {
                         <li><Link to="/deshbord/admin">Make Admin</Link></li>
                     </>}
 
-
+                    <ToastContainer></ToastContainer>
                 </ul>
 
             </div>

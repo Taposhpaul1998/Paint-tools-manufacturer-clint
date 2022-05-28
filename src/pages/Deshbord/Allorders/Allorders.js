@@ -5,7 +5,7 @@ import Allorder from './Allorder';
 
 const Allorders = () => {
 
-    const { data: orders, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/orders').then(res => res.json()));
+    const { data: orders, isLoading, refetch } = useQuery('users', () => fetch(' https://boiling-cliffs-50006.herokuapp.com/orders').then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }

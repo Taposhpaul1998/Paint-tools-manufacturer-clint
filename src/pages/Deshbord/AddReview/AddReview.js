@@ -8,7 +8,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = "http://localhost:5000/review";
+        const url = " https://boiling-cliffs-50006.herokuapp.com/review";
         fetch(url, {
             method: 'POST',
             headers: {

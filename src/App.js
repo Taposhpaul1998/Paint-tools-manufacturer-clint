@@ -17,6 +17,7 @@ import AddReview from './pages/Deshbord/AddReview/AddReview';
 import Users from './pages/Deshbord/Users/Users';
 import RequireAdmin from './pages/Login/RequriAuth/RequriAdmin';
 import Myprofile from './pages/Deshbord/MyProfile/Myprofile';
+import Portfolio from './pages/Portfolio/Portfolio';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Navber></Navber>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/portfolio" element={<Portfolio></Portfolio>}></Route>
 
         <Route path="deshbord" element={
           <RequireAuth><Deshbord></Deshbord></RequireAuth>

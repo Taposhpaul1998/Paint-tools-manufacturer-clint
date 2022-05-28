@@ -13,14 +13,14 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productid}`)
+        fetch(` https://boiling-cliffs-50006.herokuapp.com/products/${productid}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
 
 
     const onSubmit = data => {
-        const url = "http://localhost:5000/orders";
+        const url = " https://boiling-cliffs-50006.herokuapp.com/orders";
         fetch(url, {
             method: 'POST',
             headers: {

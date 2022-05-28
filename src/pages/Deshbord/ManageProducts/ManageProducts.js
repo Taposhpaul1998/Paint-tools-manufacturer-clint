@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const hendelDelete = (id) => {
         const proceed = window.confirm('Are you sure ?')
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = ` https://boiling-cliffs-50006.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

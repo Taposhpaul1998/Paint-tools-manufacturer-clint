@@ -5,7 +5,7 @@ const Allorder = ({ order, refetch }) => {
     const { pruductName, img, quantity, name, email, _id } = order;
 
     const hendelDelete = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(` https://boiling-cliffs-50006.herokuapp.com/orders/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

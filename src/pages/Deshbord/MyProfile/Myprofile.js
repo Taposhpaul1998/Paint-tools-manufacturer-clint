@@ -10,7 +10,7 @@ const Myprofile = () => {
     const { register, handleSubmit } = useForm();
     const email = user.email
 
-    const { data: users, isLoading } = useQuery('users', () => fetch(`http://localhost:5000/user/${email}`)
+    const { data: users, isLoading } = useQuery('users', () => fetch(` https://boiling-cliffs-50006.herokuapp.com/user/${email}`)
         .then(res => res.json()));
 
     if (isLoading) {
@@ -19,7 +19,7 @@ const Myprofile = () => {
 
     const onSubmit = data => {
 
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(` https://boiling-cliffs-50006.herokuapp.com/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -46,6 +46,10 @@ const Myprofile = () => {
 
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h2 className='text-xl font-bold text-center text-teal-800'>Update Profile</h2>
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input type="text" placeholder={users[0]?.name} class="input input-bordered w-full max-w-xs"  {...register("name")} />
                         <label class="label">
                             <span class="label-text">Education</span>
                         </label>

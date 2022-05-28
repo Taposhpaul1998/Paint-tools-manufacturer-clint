@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebaseinit';
 import Myorder from './Myorder';
 
 const Myorders = () => {
     const [orders, setOrders] = useState([]);
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [])
+        if (user) {
+            fetch(`http://localhost:5000/orders?email=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => res.json())
+                .then(data => setOrders(data))
+        }
+    }, [user])
     return (
         <div>
             <h2 className="text-2xl text-center my-4">My Orders :{orders.length}</h2>

@@ -14,6 +14,8 @@ import Allorders from './pages/Deshbord/Allorders/Allorders';
 import Addproduct from './pages/Deshbord/Addproducts/Addproduct';
 import ManageProducts from './pages/Deshbord/ManageProducts/ManageProducts';
 import AddReview from './pages/Deshbord/AddReview/AddReview';
+import Users from './pages/Deshbord/Users/Users';
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Route path="addProduct" element={<Addproduct></Addproduct>}></Route>
           <Route path="manageProducts" element={<ManageProducts></ManageProducts>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
+          <Route path="admin" element={<Users></Users>}></Route>
 
         </Route>
 

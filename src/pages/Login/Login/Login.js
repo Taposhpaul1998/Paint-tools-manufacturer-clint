@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebaseinit';
+import useToken from '../../Hooks/useToken';
 import Footer from '../../Shear/Footer/Footer';
 import Loading from '../../Shear/Loading/Loading';
 import Socile from '../Socile/Socile';
@@ -17,13 +18,24 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [token] = useToken(user);
+
+    let from = location.state?.from?.pathname || "/";
 
     let errorElement;
-    if (loading) {
+
+
+    if (loading || sending) {
         return <Loading></Loading>
     }
     if (error) {
         errorElement = <p className="text-red-600">Error:{error?.message}</p>
+    }
+
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     const onSubmit = async (data) => {

@@ -10,7 +10,7 @@ const ManageProducts = () => {
         if (proceed) {
             const url = `http://localhost:5000/products/${id}`;
             fetch(url, {
-                method: 'DELETE'
+                method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {

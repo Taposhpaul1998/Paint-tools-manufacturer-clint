@@ -2,7 +2,6 @@ import React from 'react';
 
 const Myorder = ({ order }) => {
     const { pruductName, img, quantity } = order;
-    console.log(order);
     return (
         <tr>
             <th><img className='w-[100px]' src={img} alt="" /></th>

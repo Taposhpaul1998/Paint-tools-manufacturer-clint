@@ -47,10 +47,6 @@ const Myprofile = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h2 className='text-xl font-bold text-center text-teal-800'>Update Profile</h2>
                         <label class="label">
-                            <span class="label-text">Name</span>
-                        </label>
-                        <input type="text" placeholder={users[0]?.name} class="input input-bordered w-full max-w-xs"  {...register("name")} />
-                        <label class="label">
                             <span class="label-text">Education</span>
                         </label>
                         <input type="text" placeholder='education' class="input input-bordered w-full max-w-xs" required {...register("education")} />

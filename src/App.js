@@ -15,6 +15,8 @@ import Addproduct from './pages/Deshbord/Addproducts/Addproduct';
 import ManageProducts from './pages/Deshbord/ManageProducts/ManageProducts';
 import AddReview from './pages/Deshbord/AddReview/AddReview';
 import Users from './pages/Deshbord/Users/Users';
+import RequireAdmin from './pages/Login/RequriAuth/RequriAdmin';
+import Myprofile from './pages/Deshbord/MyProfile/Myprofile';
 
 
 
@@ -29,11 +31,22 @@ function App() {
           <RequireAuth><Deshbord></Deshbord></RequireAuth>
         }>
           <Route path="myorders" element={<Myorders></Myorders>}></Route>
-          <Route path="allorders" element={<Allorders></Allorders>}></Route>
-          <Route path="addProduct" element={<Addproduct></Addproduct>}></Route>
-          <Route path="manageProducts" element={<ManageProducts></ManageProducts>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
-          <Route path="admin" element={<Users></Users>}></Route>
+          <Route path="profile" element={<Myprofile></Myprofile>}></Route>
+          <Route path="allorders" element={
+            <RequireAdmin><Allorders></Allorders></RequireAdmin>
+          }></Route>
+          <Route path="addProduct" element={
+            <RequireAdmin><Addproduct></Addproduct></RequireAdmin>
+          }></Route>
+          <Route path="manageProducts" element={
+            <RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>
+          }></Route>
+          <Route path="admin" element={
+            <RequireAdmin><Users></Users></RequireAdmin>
+          }></Route>
+
+
 
         </Route>
 

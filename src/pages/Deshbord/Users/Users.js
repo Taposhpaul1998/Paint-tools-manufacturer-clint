@@ -10,6 +10,7 @@ const Users = () => {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()));
+
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -20,8 +21,8 @@ const Users = () => {
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
+
+                            <th>Email</th>
                             <th>Job</th>
                             <th>Remove User</th>
                         </tr>
